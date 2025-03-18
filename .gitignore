@@ -1,4 +1,7 @@
 *.pyc
 .env
-.venv
+.venv/
 __pycache__
+cashflow-guide.md
+instance/
+migrations/
