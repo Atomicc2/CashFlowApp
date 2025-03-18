@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2>Login</h2>
+        <form method="POST" action="{{ url_for('auth.login') }}"> <!-- Corrigido para 'auth.login' -->
+            {{ form.hidden_tag() }}
+            
+            <div class="form-group">
+                <label for="nameuser">Nome de Usuário</label>
+                {{ form.username(class="form-control", placeholder="Seu nome de usuário") }} <!-- Corrigido -->
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                {{ form.password(class="form-control", placeholder="Sua senha") }} <!-- Corrigido -->
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+{% endblock %}
